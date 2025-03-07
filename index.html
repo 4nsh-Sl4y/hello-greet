@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Greeting</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #e0f7fa; font-family: 'Poppins', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .greeting-container { text-align: center; padding: 30px; background-color: #ffffff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); width: 300px; }
+    h1 { font-size: 24px; color: #00796b; margin-bottom: 20px; }
+    .greet-btn { padding: 15px 30px; background-color: #00796b; color: white; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; }
+    .greet-btn:hover { background-color: #004d40; }
+    .greeting-message { margin-top: 20px; font-size: 20px; font-weight: bold; color: #00796b; visibility: hidden; }
+  </style>
+</head>
+<body>
+  <div class="greeting-container">
+    <h1>Welcome to the Greeting Page</h1>
+    <button class="greet-btn" onclick="showGreeting()">Click to Greet!</button>
+    <div id="greetingMessage" class="greeting-message"></div>
+  </div>
+  <script>
+    function showGreeting() {
+      const messageDiv = document.getElementById('greetingMessage');
+      messageDiv.style.visibility = 'visible';
+      messageDiv.innerHTML = "<h2>Hello, Welcome to the Greeting Page!</h2>";
+    }
+  </script>
+</body>
+</html>
